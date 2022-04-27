@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Concesionario/Concesionario.iml" filepath="$PROJECT_DIR$/Concesionario/Concesionario.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cronometro/Cronometro.iml" filepath="$PROJECT_DIR$/Cronometro/Cronometro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Instituto/Instituto.iml" filepath="$PROJECT_DIR$/Instituto/Instituto.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Practica3.iml" filepath="$PROJECT_DIR$/.idea/Practica3.iml" />
     </modules>
   </component>
