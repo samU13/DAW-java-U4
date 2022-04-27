@@ -1,35 +1,40 @@
-public class Cuenta {
-    private double saldo = 0.0D;
+public abstract class Cuenta {
+    protected double saldo = 0.0D;
     private int numeroCuenta;
-    private double tipointeres;
+    private double tipoInteres;
     private Cliente cliente;
 
-    public Cuenta(double saldoInicial){}
+    public Cuenta( double saldo, int numeroCuenta, double tipoIntereses, Cliente cliente){
+        this.numeroCuenta=numeroCuenta;
+        this.tipoInteres=tipoIntereses;
+        this.cliente=cliente;
+        ingresar(saldo);
+    }
 
-    public double getBlance(){return this.saldo;}
+    public double getSaldo() {return saldo;}
+
+    public int getNumeroCuenta() {return numeroCuenta;}
+
+    public void setNumeroCuenta(int numeroCuenta) {this.numeroCuenta = numeroCuenta;}
+
+    public double getTipoInteres() {return tipoInteres;}
+
+    public void setTipoInteres(double tipoInteres) {this.tipoInteres = tipoInteres;}
+
+    public Cliente getCliente() {return cliente;}
+    public void setCliente(Cliente cliente) {this.cliente = cliente;}
 
     public void ingresar(double importe){
-        if(importe>0.0D){
-            this.saldo += importe;
-            System.out.println("Transaccion realizada correctamente.");
-            System.out.println("Su nuevo saldo es: $" + this.saldo +" --euros");
+        if(importe>0){
+            this.saldo=this.saldo+importe;
         }else{
-            System.out.println("No se puede realizar la transaccion, el ingreso debe ser mayor a $0-- euros");
-        }
-    }
-    public void retirar(double importe){
-        if (importe <=this.saldo) {
-            this.saldo -= importe;
-            System.out.println("Transaccion realizada correctamente.");
-            System.out.println("Usted ha retirado $"+importe+"-- euros. El saldo restante es: $"+this.saldo+"-- euros");
-        }else{
-            System.out.println("No dispone de saldo suficiente");
+            System.out.println("El importe debe ser mayor a cero");
         }
     }
 
-    public void actualizarSaldo(double importe){this.saldo+=importe;}
+    public void aplicarComision(double importeComision){this.saldo=this.saldo-importeComision;}
+    public void pagarIntereses(){saldo=saldo*(1+this.getTipoInteres()/100);}
+    public abstract void retirar(double importe);
 
-    public int getNumeroCuenta() {
-        return numeroCuenta;
-    }
+
 }
