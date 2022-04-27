@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Practica2/Alimentos/Alimentos.iml" filepath="$PROJECT_DIR$/Practica2/Alimentos/Alimentos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practica1/Alumnos/Alumnos.iml" filepath="$PROJECT_DIR$/Practica1/Alumnos/Alumnos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practica2/Comprobaciones/Comprobaciones.iml" filepath="$PROJECT_DIR$/Practica2/Comprobaciones/Comprobaciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practica3/Concesionario/Concesionario.iml" filepath="$PROJECT_DIR$/Practica3/Concesionario/Concesionario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practica3/Cronometro/Cronometro.iml" filepath="$PROJECT_DIR$/Practica3/Cronometro/Cronometro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DAW-java-U4.iml" filepath="$PROJECT_DIR$/.idea/DAW-java-U4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practica1/DVDCine/DVDCine.iml" filepath="$PROJECT_DIR$/Practica1/DVDCine/DVDCine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practica1/Vehiculo/Vehiculo.iml" filepath="$PROJECT_DIR$/Practica1/Vehiculo/Vehiculo.iml" />
+    </modules>
+  </component>
+</project>
