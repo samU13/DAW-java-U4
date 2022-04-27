@@ -1,64 +1,75 @@
 public class Alimentos {
-
     String nombre;
     int lipidos;
     int hidratos;
     int proteinas;
     boolean animal;
-
-
     String vitaminas;
     String minerales;
 
-    Alimentos(String nombre){ this.nombre=nombre;}
-
-    Alimentos(int lipidos, int hidratos, int proteinas, boolean animal, String vitaminas, String minerales){
-        this.lipidos=lipidos;
-        this.hidratos=hidratos;
-        this.proteinas=proteinas;
-        this.animal=animal;
-        this.vitaminas=vitaminas;
-        this.minerales=minerales;
+    Alimentos(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getNombre() {return nombre;}
+    Alimentos(String nombre,int lipidos, int hidratos, int proteinas, boolean animal, String vitaminas, String minerales) {
+        this.nombre = nombre;
+        this.lipidos = lipidos;
+        this.hidratos = hidratos;
+        this.proteinas = proteinas;
+        this.animal = animal;
+        this.vitaminas = vitaminas;
+        this.minerales = minerales;
+    }
 
-    public int getLipidos() {return lipidos;}
+    public String getNombre() {
+        return nombre;
+    }
 
-    public int getHidratos() {return hidratos;}
+    public int getLipidos() {
+        return lipidos;
+    }
 
-    public int getProteinas() {return proteinas;}
+    public int getHidratos() {
+        return hidratos;
+    }
 
-    public boolean isAnimal() {return animal;}
+    public int getProteinas() {
+        return proteinas;
+    }
 
-    public String getVitaminas() {return vitaminas;}
+    public boolean isAnimal() {
+        return animal;
+    }
 
-    public String getMinerales() {return minerales;}
+    public String getVitaminas() {
+        return vitaminas;
+    }
 
-
+    public String getMinerales() {
+        return minerales;
+    }
 
     public boolean esDietetico(){
-        int lipidos= getLipidos();
-        String vitaminas= getVitaminas();
-        return lipidos < 20 && !vitaminas.equals("B");
+        int lipidos=getLipidos();
+        String vitaminas=getVitaminas();
+        return lipidos<20&&!vitaminas.equals("B");
     }
 
-    public double calculaContenidoEnergetico (){
+    public double calculoContenidoEnergetico(){
         double lipidos = getLipidos();
         double proteinas = getProteinas();
         double hidratos= getHidratos();
         return ((lipidos/10)*9.4)+((proteinas/10)*5.3)+((hidratos/10)*4.1);
-
     }
 
-
-    public boolean esRecomendableParaDeportistas (){
-        int proteinas= getProteinas();
-        int hidratos= getHidratos();
-        int lipidos= getLipidos();
-        return ((proteinas >= 10) && (proteinas <= 15)) && ((lipidos >= 30) && (lipidos <= 35)) && ((hidratos >= 55) && (hidratos <= 65));
+    public boolean esParaDeportistas(){
+        int proteinas=getProteinas();
+        int hidratos=getHidratos();
+        int lipidos=getLipidos();
+        return ((proteinas >= 10) && (proteinas <= 15))
+                && ((lipidos >= 30) && (lipidos <= 35))
+                && ((hidratos >= 55) && (hidratos <= 65));
     }
-
     public String codigoV(){
         if(getVitaminas().equals("A")||getVitaminas().equals("a")){
             return "Alto";
@@ -77,7 +88,6 @@ public class Alimentos {
         }else{
             return "Medio";
         }
-
     }
 
     public String muestraAlimento() {
@@ -91,9 +101,4 @@ public class Alimentos {
                     " vitaminas y un " + codigoM() + " contenido en minerales. No es de origen animal";
         }
     }
-
 }
-
-
-
-
