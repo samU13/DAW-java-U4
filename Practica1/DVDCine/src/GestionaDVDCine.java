@@ -23,6 +23,8 @@ public class GestionaDVDCine {
                 ? "Es un thriller" : "No es un thriller");
         if (peli.tieneResumen()) {
             System.out.println("La ficha tiene resumen");
+        }else{
+            System.out.println("La ficha no tiene resumen");
         }
     }
 }
