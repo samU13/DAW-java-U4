@@ -25,9 +25,9 @@ public class Vehiculo {
 
     public String imprimir(){
         if( iscRuedas()){
-            return "Modelo: "+modelo+" /nPotencia: "+getPotencia()+ "/nTraccion a las cuatro ruedas";
+            return "Modelo: "+modelo+" \nPotencia: "+getPotencia()+ "\nTraccion a las cuatro ruedas";
         }else{
-            return "Modelo: "+modelo+" /nPotencia: "+getPotencia()+ "/nSin traccion a las cuatro ruedas";
+            return "Modelo: "+modelo+" \nPotencia: "+getPotencia()+ "\nSin traccion a las cuatro ruedas";
         }
     }
 }
