@@ -1,9 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class pruebaAlimento {
-
-    public static void main(String[] args){
+public class PruebaAlimentos {
+    public static void main(String[] args) {
         Alimentos a1;
         Scanner teclado=new Scanner(System.in);
 
@@ -25,26 +24,23 @@ public class pruebaAlimento {
         boolean animal;
         animal= anim == 1;
 
-        a1 = new Alimentos(nombre);
-        a1 = new Alimentos(lipidos,hidratos,proteinas,animal,vitaminas,minerales);
+        a1 = new Alimentos(nombre,lipidos,hidratos,proteinas,animal,vitaminas,minerales);
 
         System.out.println(a1.muestraAlimento());
+
         if(a1.esDietetico()){
             System.out.println("Es un producto dietetico.");
         }else {
             System.out.println("No es un producto dietetico.");
         }
 
-        if(a1.esRecomendableParaDeportistas()){
+        if(a1.esParaDeportistas()){
             System.out.println("Es recomendable para deportistas.");
         }else{
             System.out.println("No es recomendable para deportistas.");
         }
-
         DecimalFormat df= new DecimalFormat("#.00");
 
-        System.out.print("El contenido energetico de 1g del alimentos es de: "+df.format(a1.calculaContenidoEnergetico())+" Kcal");
-
-
+        System.out.print("El contenido energetico de 1g del alimentos es de: "+df.format(a1.calculoContenidoEnergetico())+" Kcal");
     }
 }
