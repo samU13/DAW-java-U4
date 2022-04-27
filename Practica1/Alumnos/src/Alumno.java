@@ -18,7 +18,7 @@ public class Alumno {
     }
 
     public String muestraAlumno(){
-        return "Matricula del alumno: "+matricula+" Nombre: "+nombre+" Nota media del alumno: "+getMedia();
+        return "Matricula del alumno: "+matricula+"\r\n"+"Nombre: "+nombre+"\r\n"+"Nota media del alumno: "+getMedia();
     }
 
 }
