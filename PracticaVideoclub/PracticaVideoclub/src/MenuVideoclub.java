@@ -3,9 +3,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class MenuVideoclub {
-    private static Scanner teclado = new Scanner(System.in);
+    private static final Scanner teclado = new Scanner(System.in);
     private static VideoClub videoclub;
-    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyy");
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyy");
 
     public static void main(String[] args) {
         int opcion;
@@ -15,30 +15,14 @@ public class MenuVideoclub {
             opcion = mostrarMenu();
 
             switch (opcion) {
-                case 1:
-                    videoclub.listaProductos();
-                    break;
-                case 2:
-                    addProducto();
-                    break;
-                case 3:
-                    fichaProducto();
-                    break;
-                case 4:
-                    videoclub.listaClientes();
-                    break;
-                case 5:
-                    addCliente();
-                    break;
-                case 6:
-                    fichaCliente();
-                    break;
-                case 7:
-                    alquilarProducto();
-                    break;
-                case 8:
-                    videoclub.listadoAlquileres();
-                    break;
+                case 1 -> videoclub.listaProductos();
+                case 2 -> addProducto();
+                case 3 -> fichaProducto();
+                case 4 -> videoclub.listaClientes();
+                case 5 -> addCliente();
+                case 6 -> fichaCliente();
+                case 7 -> alquilarProducto();
+                case 8 -> videoclub.listadoAlquileres();
             }
 
         } while (opcion != 0);
@@ -71,12 +55,8 @@ public class MenuVideoclub {
         System.out.println("3. Cancelar");
         opcion = Integer.parseInt(teclado.nextLine());
         switch (opcion) {
-            case 1:
-                addPelicula();
-                break;
-            case 2:
-                addVideojuego();
-                break;
+            case 1 -> addPelicula();
+            case 2 -> addVideojuego();
         }
     }
 
