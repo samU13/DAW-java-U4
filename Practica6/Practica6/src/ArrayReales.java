@@ -10,9 +10,9 @@ public class ArrayReales implements Estadisticas{
     }
     public double minimo(){
         double menor = valor[0];
-        for (int i = 0; i < valor.length; i++){
-            if (menor > valor[i]){
-                menor=valor[i];
+        for (double v : valor) {
+            if (menor > v) {
+                menor = v;
             }
         }
         return menor;
@@ -20,9 +20,9 @@ public class ArrayReales implements Estadisticas{
 
     public double maximo(){
         double mayor = valor[0];
-        for (int i = 0; i < valor.length; i++){
-            if (mayor < valor[i]){
-                mayor=valor[i];
+        for (double v : valor) {
+            if (mayor < v) {
+                mayor = v;
             }
         }
         return mayor;
@@ -30,8 +30,8 @@ public class ArrayReales implements Estadisticas{
 
     public double sumatorio(){
         double suma=0.0;
-        for (int i = 0; i < valor.length; i++){
-            suma+=valor[i];
+        for (double v : valor) {
+            suma += v;
         }
         return suma;
     }
